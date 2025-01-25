@@ -9,7 +9,7 @@ public class ExtraScript : MonoBehaviour
     public float timerDurationCustomer;
     public ClickScript clickScript;
     private Vector3 endPos;
-    private Vector3 beginningPos;
+    private Vector3 killPos;
     private float timer;
     private bool isReturningES;
     private bool madeNewClone = false;
@@ -17,7 +17,7 @@ public class ExtraScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        beginningPos = transform.position;
+        killPos = new Vector3(9, -2, 0);
     }
 
     // Update is called once per frame
@@ -40,9 +40,9 @@ public class ExtraScript : MonoBehaviour
         {
             //Handles movement away from the counter
             transform.position = Vector3.MoveTowards(transform.position, 
-            beginningPos,
+            killPos,
             Time.deltaTime * movementSpeed);
-            if(transform.position == new Vector3(8, -2, 0))
+            if(transform.position.x >= 8.5f)
             {
                 Debug.Log("should destroy");
                 Destroy(gameObject);
