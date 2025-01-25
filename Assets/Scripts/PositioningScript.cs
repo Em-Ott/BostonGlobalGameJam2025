@@ -23,5 +23,10 @@ public class PositioningScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         ordering = false;
+        if (collision.transform.position.x < 0) {
+            // Game over? Something that happens when you miss? 
+            // Scene change(?)
+            Destroy(collision.gameObject);
+        }
     }
 }

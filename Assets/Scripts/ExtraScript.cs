@@ -10,6 +10,7 @@ public class ExtraScript : MonoBehaviour
     public float timerDurationCustomer;
     public ClickScript clickScript;
     private Vector3 endPos;
+    private Vector3 newEnd;
     private Vector3 killPos;
     private float timer;
     private bool isReturningES;
@@ -30,6 +31,7 @@ public class ExtraScript : MonoBehaviour
         //customers?
         timer += Time.deltaTime;
 
+        // Makes the movement silly
         float dy = bobLength * (float) Math.Sin(bobFrequency * timer);
         Debug.Log(dy);
 
@@ -58,6 +60,10 @@ public class ExtraScript : MonoBehaviour
 
         } else
         {
+            endPos = ManagerScript.Instance.endPosManager;
+            transform.position = Vector3.MoveTowards(transform.position, 
+                endPos + (transform.position - endPos).normalized * maxDistance,
+                Time.deltaTime * movementSpeed);
             if(ManagerScript.Instance.positioningScript.ordering)
             {
                 //Maybe have a second collider which stops movement now? Actually making our colliders stop 
@@ -65,7 +71,7 @@ public class ExtraScript : MonoBehaviour
                 //on trigger when this (above) is true
                 //That being said we still have an on trigger (prefab player) so that way players can go
                 //through players
-            } else 
+            } else
             {
                 //Handles movement to counter
                 //MoveTowards moves object, toward endPos + unit Vector * max Distance we want from it
@@ -73,10 +79,6 @@ public class ExtraScript : MonoBehaviour
                 //It'll stop when it hits the collider anyway 
                 //(because of the if statement dictating other prefabs) but this is how it is rn???
                 //I think I need to take a break and figure out position stuff
-                endPos = ManagerScript.Instance.endPosManager;
-                transform.position = Vector3.MoveTowards(transform.position, 
-                endPos + (transform.position - endPos).normalized * maxDistance,
-                Time.deltaTime * movementSpeed);
             }
         }
     }

@@ -11,6 +11,8 @@ public class ClickScript : MonoBehaviour {
     private bool isBeingMade = false;
     private bool canMake = false;
     private Vector3 endPosClick;
+    public PositioningScript positioningScript;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,7 +39,7 @@ public class ClickScript : MonoBehaviour {
         } else if (isBeingMade) 
         {
             timer += Time.deltaTime;
-        } else if (Input.GetMouseButtonDown(0) && canMake) 
+        } else if (Input.GetMouseButtonDown(0) && canMake && positioningScript.ordering) 
         {
             Debug.Log("start");
             FindObjectOfType<ManageAudio>().Play("slap");

@@ -484,7 +484,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -773,9 +773,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 44
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 0, b: 0.70319223, a: 0.043137256}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -794,8 +794,8 @@ Transform:
   m_GameObject: {fileID: 649171539}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0125, y: -1.3693, z: 0}
-  m_LocalScale: {x: 1.6654515, y: 7.432559, z: 1}
+  m_LocalPosition: {x: -0.0819, y: -0.58, z: 0}
+  m_LocalScale: {x: 0.94373405, y: 32.983334, z: 0.8333333}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1182,6 +1182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: {fileID: 895934898}
   endPosManager: {x: 0, y: 0, z: 0}
+  newEndPos: {x: 0, y: 0, z: 0}
   positioningScript: {fileID: 649171543}
   moneyCounter: {fileID: 336301531}
   money: 0
@@ -1272,18 +1273,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 666702379080782412, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 666702379080782412, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 666702379080782412, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2733067519909144245, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.8
@@ -1324,17 +1313,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3694657581669475350, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
-      propertyPath: m_BodyType
-      value: 1
+    - target: {fileID: 4986748535799655153, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
+      propertyPath: timerDurationCustomer
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8192978757825460190, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
+      propertyPath: positioningScript
+      value: 
+      objectReference: {fileID: 649171543}
     - target: {fileID: 8193997032118184036, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
       propertyPath: m_Name
       value: Extra
-      objectReference: {fileID: 0}
-    - target: {fileID: 8834796789090296704, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
