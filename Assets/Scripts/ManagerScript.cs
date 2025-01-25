@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class ManagerScript : MonoBehaviour
@@ -6,6 +7,7 @@ public class ManagerScript : MonoBehaviour
     public Vector3 endPosManager;
     public static ManagerScript Instance;
     public PositioningScript positioningScript;
+    public TextMeshProUGUI moneyCounter; 
 
     void Awake()
     {
@@ -15,6 +17,7 @@ public class ManagerScript : MonoBehaviour
     void Start()
     {
         endPosManager = new Vector3(counter.transform.position.x, -2, 0);
+        Debug.Log(moneyCounter);
         //endPos = (-4.31, -2.00, 0.00)
     }
 

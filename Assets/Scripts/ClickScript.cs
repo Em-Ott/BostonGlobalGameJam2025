@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class ClickScript : MonoBehaviour
@@ -6,6 +7,7 @@ public class ClickScript : MonoBehaviour
     public int moneyIncrease;
     public float timerDurationDrink;
     public bool isReturningCS = false;
+    private TextMeshProUGUI textUpdate;
     private float timer = 0;
     private bool isBeingMade = false;
     private bool canMake = false;
@@ -14,6 +16,8 @@ public class ClickScript : MonoBehaviour
     void Start()
     {
         isReturningCS = false;
+        textUpdate = ManagerScript.Instance.moneyCounter;
+        Debug.Log(textUpdate);
     }
 
     // Update is called once per frame
@@ -26,8 +30,7 @@ public class ClickScript : MonoBehaviour
             isBeingMade = false;
             timer = 0;
             isReturningCS = true;
-            Debug.Log(money);
-            Debug.Log(isReturningCS);
+            textUpdate.text = money.ToString();
 
         } else if (isBeingMade) 
         {
