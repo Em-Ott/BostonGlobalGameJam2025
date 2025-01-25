@@ -7,14 +7,16 @@ public class ExtraScript : MonoBehaviour
     public float maxDistance; 
     public GameObject extraPrefab;
     public float timerDurationCustomer;
-    public bool canMakeES = false;
+    public ClickScript clickScript;
     private Vector3 endPos;
+    private Vector3 beginningPos;
     private float timer;
+    private bool isReturningES;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        endPos = ManagerScript.Instance.endPosManager;
+        beginningPos = transform.position;
     }
 
     // Update is called once per frame
@@ -31,13 +33,29 @@ public class ExtraScript : MonoBehaviour
             timer = 0;
         }
 
-        //Handles movement to counter
-        //MoveTowards moves object, toward endPos + unit Vector * max Distance we want from it
-        //at a steady rate, adjust movementSpeed for faster/slower 
-        endPos = ManagerScript.Instance.endPosManager;
-        transform.position = Vector3.MoveTowards(transform.position, 
-        endPos + (transform.position - endPos).normalized * maxDistance,
-        Time.deltaTime * movementSpeed);
+        isReturningES = clickScript.isReturningCS;
+        if(isReturningES)
+        {
+            //Handles movement away from the counter
+            transform.position = Vector3.MoveTowards(transform.position, 
+            beginningPos,
+            Time.deltaTime * movementSpeed);
+            if(transform.position == new Vector3(8, -2, 0))
+            {
+                Destroy(extraPrefab);
+            }
+
+        } else
+        {
+            //Handles movement to counter
+            //MoveTowards moves object, toward endPos + unit Vector * max Distance we want from it
+            //at a steady rate, adjust movementSpeed for faster/slower 
+            endPos = ManagerScript.Instance.endPosManager;
+            transform.position = Vector3.MoveTowards(transform.position, 
+            endPos + (transform.position - endPos).normalized * maxDistance,
+            Time.deltaTime * movementSpeed);
+        }
+
 
     } 
 }

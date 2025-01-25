@@ -106,6 +106,7 @@ MonoBehaviour:
   money: 0
   moneyIncrease: 5
   timerDurationDrink: 8
+  isReturningCS: 0
 --- !u!114 &4986748535799655153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +123,7 @@ MonoBehaviour:
   maxDistance: 4.7
   extraPrefab: {fileID: 8193997032118184036}
   timerDurationCustomer: 10
-  canMakeES: 0
+  clickScript: {fileID: 8192978757825460190}
 --- !u!50 &3694657581669475350
 Rigidbody2D:
   serializedVersion: 5
