@@ -5,6 +5,7 @@ public class ManagerScript : MonoBehaviour
     public GameObject counter;
     public Vector3 endPosManager;
     public static ManagerScript Instance;
+    public PositioningScript positioningScript;
 
     void Awake()
     {
@@ -14,6 +15,7 @@ public class ManagerScript : MonoBehaviour
     void Start()
     {
         endPosManager = new Vector3(counter.transform.position.x, -2, 0);
+        //endPos = (-4.31, -2.00, 0.00)
     }
 
     // Update is called once per frame

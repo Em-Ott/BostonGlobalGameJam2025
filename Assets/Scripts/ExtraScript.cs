@@ -12,6 +12,7 @@ public class ExtraScript : MonoBehaviour
     private Vector3 beginningPos;
     private float timer;
     private bool isReturningES;
+    private bool madeNewClone = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,10 +28,11 @@ public class ExtraScript : MonoBehaviour
         timer += Time.deltaTime;
 
         //Handles timer adding a new customer every x seconds
-        if (timer >= timerDurationCustomer) {
+        if (timer >= timerDurationCustomer && madeNewClone == false) {
             //add if statement to see if they're already maxed out on people maybe
-            GameObject newExtra = Instantiate(extraPrefab, new Vector3(8.8f,-2,0), Quaternion.identity); 
-            timer = 0;
+            GameObject newExtra = Instantiate(extraPrefab, new Vector3(8.8f,-2,0), Quaternion.identity);
+            //Stops exponential growth
+            madeNewClone = true; 
         }
 
         isReturningES = clickScript.isReturningCS;
@@ -42,18 +44,25 @@ public class ExtraScript : MonoBehaviour
             Time.deltaTime * movementSpeed);
             if(transform.position == new Vector3(8, -2, 0))
             {
-                Destroy(extraPrefab);
+                Debug.Log("should destroy");
+                Destroy(gameObject);
             }
 
         } else
         {
-            //Handles movement to counter
-            //MoveTowards moves object, toward endPos + unit Vector * max Distance we want from it
-            //at a steady rate, adjust movementSpeed for faster/slower 
-            endPos = ManagerScript.Instance.endPosManager;
-            transform.position = Vector3.MoveTowards(transform.position, 
-            endPos + (transform.position - endPos).normalized * maxDistance,
-            Time.deltaTime * movementSpeed);
+            if(ManagerScript.Instance.positioningScript.ordering)
+            {
+                
+            } else 
+            {
+                //Handles movement to counter
+                //MoveTowards moves object, toward endPos + unit Vector * max Distance we want from it
+                //at a steady rate, adjust movementSpeed for faster/slower 
+                endPos = ManagerScript.Instance.endPosManager;
+                transform.position = Vector3.MoveTowards(transform.position, 
+                endPos + (transform.position - endPos).normalized * maxDistance,
+                Time.deltaTime * movementSpeed);
+            }
         }
 
 
