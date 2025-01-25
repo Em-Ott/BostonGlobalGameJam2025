@@ -32,6 +32,8 @@ public class ClickScript : MonoBehaviour
             isReturningCS = true;
             textUpdate.text = money.ToString();
             ManagerScript.Instance.money = money;
+            Debug.Log("Leaving!");
+            FindObjectOfType<ManageAudio>().Play("ding");
 
         } else if (isBeingMade) 
         {
@@ -39,6 +41,7 @@ public class ClickScript : MonoBehaviour
         } else if (Input.GetMouseButtonDown(0) && canMake) 
         {
             Debug.Log("start");
+            FindObjectOfType<ManageAudio>().Play("slap");
             isBeingMade = true;
         }
     }
