@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money: 0
   moneyIncrease: 5
-  timerDurationDrink: 8
+  timerDurationDrink: 4
   isReturningCS: 0
 --- !u!114 &4986748535799655153
 MonoBehaviour:
@@ -122,7 +122,7 @@ MonoBehaviour:
   movementSpeed: 4
   maxDistance: 4.7
   extraPrefab: {fileID: 8193997032118184036}
-  timerDurationCustomer: 10
+  timerDurationCustomer: 5
   clickScript: {fileID: 8192978757825460190}
 --- !u!50 &3694657581669475350
 Rigidbody2D:

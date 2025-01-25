@@ -52,12 +52,19 @@ public class ExtraScript : MonoBehaviour
         {
             if(ManagerScript.Instance.positioningScript.ordering)
             {
-                
+                //Maybe have a second collider which stops movement now? Actually making our colliders stop 
+                //prefabs maybe?? Having a second collider which is an on trigger and have it no longer be
+                //on trigger when this (above) is true
+                //That being said we still have an on trigger (prefab player) so that way players can go
+                //through players
             } else 
             {
                 //Handles movement to counter
                 //MoveTowards moves object, toward endPos + unit Vector * max Distance we want from it
                 //at a steady rate, adjust movementSpeed for faster/slower 
+                //It'll stop when it hits the collider anyway 
+                //(because of the if statement dictating other prefabs) but this is how it is rn???
+                //I think I need to take a break and figure out position stuff
                 endPos = ManagerScript.Instance.endPosManager;
                 transform.position = Vector3.MoveTowards(transform.position, 
                 endPos + (transform.position - endPos).normalized * maxDistance,

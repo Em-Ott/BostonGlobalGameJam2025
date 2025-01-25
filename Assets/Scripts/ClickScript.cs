@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class ClickScript : MonoBehaviour
 {
-    public int money = 0;
     public int moneyIncrease;
     public float timerDurationDrink;
     public bool isReturningCS = false;
     private TextMeshProUGUI textUpdate;
+    private int money;
     private float timer = 0;
     private bool isBeingMade = false;
     private bool canMake = false;
@@ -17,7 +17,6 @@ public class ClickScript : MonoBehaviour
     {
         isReturningCS = false;
         textUpdate = ManagerScript.Instance.moneyCounter;
-        Debug.Log(textUpdate);
     }
 
     // Update is called once per frame
@@ -26,11 +25,13 @@ public class ClickScript : MonoBehaviour
         //canMakeCS = ManagerScript.Instance.extraScript.canMakeES;
         if (timer >= timerDurationDrink) 
         {
+            money = ManagerScript.Instance.money;
             money += moneyIncrease;
             isBeingMade = false;
             timer = 0;
             isReturningCS = true;
             textUpdate.text = money.ToString();
+            ManagerScript.Instance.money = money;
 
         } else if (isBeingMade) 
         {

@@ -1110,7 +1110,7 @@ MonoBehaviour:
   counter: {fileID: 895934898}
   endPosManager: {x: 0, y: 0, z: 0}
   positioningScript: {fileID: 649171543}
-  moneyCounter: {fileID: 336301529}
+  moneyCounter: {fileID: 336301531}
 --- !u!1 &2121821600
 GameObject:
   m_ObjectHideFlags: 0

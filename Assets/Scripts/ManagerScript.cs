@@ -8,6 +8,7 @@ public class ManagerScript : MonoBehaviour
     public static ManagerScript Instance;
     public PositioningScript positioningScript;
     public TextMeshProUGUI moneyCounter; 
+    public int money;
 
     void Awake()
     {
@@ -17,7 +18,6 @@ public class ManagerScript : MonoBehaviour
     void Start()
     {
         endPosManager = new Vector3(counter.transform.position.x, -2, 0);
-        Debug.Log(moneyCounter);
         //endPos = (-4.31, -2.00, 0.00)
     }
 
