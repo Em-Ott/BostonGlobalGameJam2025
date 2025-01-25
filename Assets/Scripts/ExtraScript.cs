@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ExtraScript : MonoBehaviour
@@ -13,6 +14,8 @@ public class ExtraScript : MonoBehaviour
     private float timer;
     private bool isReturningES;
     private bool madeNewClone = false;
+    public float bobFrequency = 10;
+    public float bobLength = 0.01f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +29,11 @@ public class ExtraScript : MonoBehaviour
         //Handled timer manually since I think we could have a character effect who can maybe reduce time for
         //customers?
         timer += Time.deltaTime;
+
+        float dy = bobLength * (float) Math.Sin(bobFrequency * timer);
+        Debug.Log(dy);
+
+        transform.position = new Vector2(transform.position.x, transform.position.y + dy);
 
         //Handles timer adding a new customer every x seconds
         if (timer >= timerDurationCustomer && madeNewClone == false) {
@@ -71,7 +79,5 @@ public class ExtraScript : MonoBehaviour
                 Time.deltaTime * movementSpeed);
             }
         }
-
-
-    } 
+    }
 }

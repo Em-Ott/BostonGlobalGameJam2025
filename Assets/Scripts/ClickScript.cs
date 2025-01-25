@@ -1,8 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class ClickScript : MonoBehaviour
-{
+public class ClickScript : MonoBehaviour {
     public int moneyIncrease;
     public float timerDurationDrink;
     public bool isReturningCS = false;
