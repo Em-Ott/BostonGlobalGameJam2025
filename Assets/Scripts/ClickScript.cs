@@ -31,6 +31,7 @@ public class ClickScript : MonoBehaviour {
             isBeingMade = false;
             timer = 0;
             isReturningCS = true;
+            transform.Rotate(0, 180, 0);
             textUpdate.text = money.ToString();
             ManagerScript.Instance.money = money;
             FindObjectOfType<ManageAudio>().Play("ding");
