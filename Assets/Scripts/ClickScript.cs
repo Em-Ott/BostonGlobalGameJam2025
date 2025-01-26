@@ -12,6 +12,7 @@ public class ClickScript : MonoBehaviour {
     private bool canMake = false;
     private Vector3 endPosClick;
     public PositioningScript positioningScript;
+    public Animator characterAnim;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,6 +36,7 @@ public class ClickScript : MonoBehaviour {
             textUpdate.text = money.ToString();
             ManagerScript.Instance.money = money;
             FindObjectOfType<ManageAudio>().Play("ding");
+            characterAnim.SetBool("serve", false);
 
         } else if (isBeingMade) 
         {
@@ -42,6 +44,7 @@ public class ClickScript : MonoBehaviour {
         } else if (Input.GetMouseButtonDown(0) && canMake) 
         {
             FindObjectOfType<ManageAudio>().Play("slap");
+            characterAnim.SetBool("serve", true);
             isBeingMade = true;
         }
     }

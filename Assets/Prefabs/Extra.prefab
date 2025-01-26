@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 5585183706761618414, guid: e5c3fc95b1fc6a84ca615287ced51885, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -282,6 +282,7 @@ MonoBehaviour:
   moneyIncrease: 5
   timerDurationDrink: 0.25
   isReturningCS: 0
+  money: 0
   positioningScript: {fileID: 0}
 --- !u!114 &4986748535799655153
 MonoBehaviour:
@@ -298,11 +299,12 @@ MonoBehaviour:
   movementSpeed: 4
   maxDistance: 2.5
   extraPrefab: {fileID: 8193997032118184036}
-  timerDurationCustomer: 1
+  timerDurationCustomer: 3
   clickScript: {fileID: 8192978757825460190}
   bobFrequency: 10
   bobLength: 0.01
   sadCustomer: {fileID: 4315647957909580524}
+  characterAnim: {fileID: 0}
 --- !u!50 &3694657581669475350
 Rigidbody2D:
   serializedVersion: 5

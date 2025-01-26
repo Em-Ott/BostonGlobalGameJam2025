@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 363a2a2ebe49d1d40afa475501f34534
+guid: 26875134fdac68a4a88203ff9b027d54
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1583731804367174082
-    second: pbell_0
+      213: -7414175438422869247
+    second: Ekaterina2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pbell_0
+      name: Ekaterina2_0
       rect:
         serializedVersion: 2
-        x: 160
-        y: 123
-        width: 280
-        height: 287
+        x: 379
+        y: 323
+        width: 929
+        height: 1444
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e36c43d9054750ae0800000000000000
-      internalID: -1583731804367174082
+      spriteID: 10bf06288be8b1990800000000000000
+      internalID: -7414175438422869247
       vertices: []
       indices: 
       edges: []
