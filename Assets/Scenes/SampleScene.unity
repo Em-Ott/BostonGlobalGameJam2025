@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 649171543}
   m_Layer: 0
   m_Name: DrinkMakeHitbox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -859,6 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ordering: 0
+  miss: 0
 --- !u!1 &895934898
 GameObject:
   m_ObjectHideFlags: 0

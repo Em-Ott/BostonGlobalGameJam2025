@@ -18,7 +18,7 @@ public class ManagerScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        endPosManager = new Vector3(counter.transform.position.x - 30, -2, 0);
+        endPosManager = new Vector3(counter.transform.position.x, -2, 0);
     }
 
     // Update is called once per frame

@@ -33,15 +33,13 @@ public class ClickScript : MonoBehaviour {
             isReturningCS = true;
             textUpdate.text = money.ToString();
             ManagerScript.Instance.money = money;
-            Debug.Log("Leaving!");
             FindObjectOfType<ManageAudio>().Play("ding");
 
         } else if (isBeingMade) 
         {
             timer += Time.deltaTime;
-        } else if (Input.GetMouseButtonDown(0) && canMake && positioningScript.ordering) 
+        } else if (Input.GetMouseButtonDown(0) && canMake) 
         {
-            Debug.Log("start");
             FindObjectOfType<ManageAudio>().Play("slap");
             isBeingMade = true;
         }
@@ -49,8 +47,17 @@ public class ClickScript : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
-        canMake = true;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            canMake = true;
+        }
+        
     } 
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        canMake = false;
+    }
 
 }
 

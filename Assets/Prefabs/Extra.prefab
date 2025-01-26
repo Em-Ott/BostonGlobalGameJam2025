@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 4
-  maxDistance: 4.7
+  maxDistance: 3
   extraPrefab: {fileID: 8193997032118184036}
   timerDurationCustomer: 1
   clickScript: {fileID: 8192978757825460190}

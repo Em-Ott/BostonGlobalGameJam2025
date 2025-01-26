@@ -22,6 +22,7 @@ public class ExtraScript : MonoBehaviour
     void Start()
     {
         killPos = new Vector3(9, -2, 0);
+        isReturningES = false;
     }
 
     // Update is called once per frame
@@ -33,7 +34,6 @@ public class ExtraScript : MonoBehaviour
 
         // Makes the movement silly
         float dy = bobLength * (float) Math.Sin(bobFrequency * timer);
-        Debug.Log(dy);
 
         transform.position = new Vector2(transform.position.x, transform.position.y + dy);
 
@@ -43,10 +43,11 @@ public class ExtraScript : MonoBehaviour
             GameObject newExtra = Instantiate(extraPrefab, new Vector3(8.8f,-2,0), Quaternion.identity);
             //Stops exponential growth
             madeNewClone = true; 
+            Debug.Log(timer);
         }
 
         isReturningES = clickScript.isReturningCS;
-        if(isReturningES)
+        if(isReturningES) 
         {
             //Handles movement away from the counter
             transform.position = Vector3.MoveTowards(transform.position, 
@@ -54,31 +55,33 @@ public class ExtraScript : MonoBehaviour
             Time.deltaTime * movementSpeed);
             if(transform.position.x >= 8.5f)
             {
-                Debug.Log("should destroy");
+                ManagerScript.Instance.positioningScript.ordering = false;
                 Destroy(gameObject);
             }
 
-        } else
+        } else if(ManagerScript.Instance.positioningScript.miss)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, 
+            new Vector3(-8, -2, 0),
+            Time.deltaTime * movementSpeed);
+            if(transform.position.x <= -7.5f)
+            {
+                ManagerScript.Instance.positioningScript.miss = false;
+                Destroy(gameObject);
+            }
+        }
+        else 
         {
             endPos = ManagerScript.Instance.endPosManager;
             transform.position = Vector3.MoveTowards(transform.position, 
-                endPos + (transform.position - endPos).normalized * maxDistance,
-                Time.deltaTime * movementSpeed);
+            endPos + (transform.position - endPos).normalized * maxDistance,
+            Time.deltaTime * movementSpeed);
             if(ManagerScript.Instance.positioningScript.ordering)
             {
-                //Maybe have a second collider which stops movement now? Actually making our colliders stop 
-                //prefabs maybe?? Having a second collider which is an on trigger and have it no longer be
-                //on trigger when this (above) is true
-                //That being said we still have an on trigger (prefab player) so that way players can go
-                //through players
+                //Discarded feature
             } else
             {
-                //Handles movement to counter
-                //MoveTowards moves object, toward endPos + unit Vector * max Distance we want from it
-                //at a steady rate, adjust movementSpeed for faster/slower 
-                //It'll stop when it hits the collider anyway 
-                //(because of the if statement dictating other prefabs) but this is how it is rn???
-                //I think I need to take a break and figure out position stuff
+                //Now main feature
             }
         }
     }

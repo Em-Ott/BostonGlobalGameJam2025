@@ -3,6 +3,7 @@ using UnityEngine;
 public class PositioningScript : MonoBehaviour
 {
     public bool ordering;
+    public bool miss;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,16 +18,14 @@ public class PositioningScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
-        ordering = true;
     } 
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        ordering = false;
         if (collision.transform.position.x < 0) {
             // Game over? Something that happens when you miss? 
             // Scene change(?)
-            Destroy(collision.gameObject);
+            miss = true;
         }
     }
 }
