@@ -20,10 +20,4 @@ public class ManagerScript : MonoBehaviour
     {
         endPosManager = new Vector3(counter.transform.position.x, -2, 0);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

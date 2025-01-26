@@ -38,12 +38,18 @@ public class ExtraScript : MonoBehaviour
         transform.position = new Vector2(transform.position.x, transform.position.y + dy);
 
         //Handles timer adding a new customer every x seconds
-        if (timer >= timerDurationCustomer && madeNewClone == false) {
+        if (timer >= timerDurationCustomer && madeNewClone == false && 
+        !ManagerScript.Instance.positioningScript.immediateExit) 
+        {
             //add if statement to see if they're already maxed out on people maybe
             GameObject newExtra = Instantiate(extraPrefab, new Vector3(8.8f,-2,0), Quaternion.identity);
             //Stops exponential growth
             madeNewClone = true; 
-            Debug.Log(timer);
+        } else if (ManagerScript.Instance.positioningScript.immediateExit)
+        {
+            //this stops lag from customer exiting the 2d trigger and instanatiating at the same time
+            //this just delays it to next update so the customer's movement is smooth
+            ManagerScript.Instance.positioningScript.immediateExit = false;
         }
 
         isReturningES = clickScript.isReturningCS;
@@ -55,7 +61,6 @@ public class ExtraScript : MonoBehaviour
             Time.deltaTime * movementSpeed);
             if(transform.position.x >= 8.5f)
             {
-                ManagerScript.Instance.positioningScript.ordering = false;
                 Destroy(gameObject);
             }
 
@@ -76,13 +81,6 @@ public class ExtraScript : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, 
             endPos + (transform.position - endPos).normalized * maxDistance,
             Time.deltaTime * movementSpeed);
-            if(ManagerScript.Instance.positioningScript.ordering)
-            {
-                //Discarded feature
-            } else
-            {
-                //Now main feature
-            }
         }
     }
 }

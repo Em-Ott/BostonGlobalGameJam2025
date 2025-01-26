@@ -2,19 +2,8 @@ using UnityEngine;
 
 public class PositioningScript : MonoBehaviour
 {
-    public bool ordering;
+    public bool immediateExit;
     public bool miss;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
@@ -22,9 +11,10 @@ public class PositioningScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.transform.position.x < 0) {
+        if (collision.gameObject.CompareTag("Customer")) {
             // Game over? Something that happens when you miss? 
             // Scene change(?)
+            immediateExit = true;
             miss = true;
         }
     }

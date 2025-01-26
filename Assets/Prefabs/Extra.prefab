@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8834796789090296704}
   m_Layer: 0
   m_Name: Extra
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 4
-  maxDistance: 3
+  maxDistance: 2.5
   extraPrefab: {fileID: 8193997032118184036}
   timerDurationCustomer: 1
   clickScript: {fileID: 8192978757825460190}
