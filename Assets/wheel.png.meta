@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e5c3fc95b1fc6a84ca615287ced51885
+guid: e1af607ab39db0044aba37a3d1c652bb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5585183706761618414
-    second: CustomerSad_0
+      213: -2785366349977813741
+    second: wheel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CustomerSad_0
+      name: wheel_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 361
-        height: 1222
+        width: 700
+        height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ee363de5dfe828d40800000000000000
-      internalID: 5585183706761618414
+      spriteID: f8205dd1ea52c404cbaacbf8ffe8a8a6
+      internalID: -489180338
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 046ce7917a8d98447a5f14bb7e4bff7a
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CustomerSad_0: 5585183706761618414
+      wheel_0: -2785366349977813741
+      wheel_1: -489180338
+      wheel_2: 1362434348
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

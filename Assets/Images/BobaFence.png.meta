@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BobaFence_0: -824197448749118172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

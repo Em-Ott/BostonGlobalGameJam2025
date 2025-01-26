@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BobaJar+Cup_0: 8134381505278136014
+      BobaJar+Cup_1: -1308615466412843562
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

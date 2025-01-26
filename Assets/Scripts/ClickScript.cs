@@ -6,7 +6,7 @@ public class ClickScript : MonoBehaviour {
     public float timerDurationDrink;
     public bool isReturningCS = false;
     private TextMeshProUGUI textUpdate;
-    private int money;
+    public int money;
     private float timer = 0;
     private bool isBeingMade = false;
     private bool canMake = false;
