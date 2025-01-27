@@ -758,6 +758,7 @@ GameObject:
   - component: {fileID: 535812888}
   - component: {fileID: 535812887}
   - component: {fileID: 535812889}
+  - component: {fileID: 535812890}
   m_Layer: 0
   m_Name: Ekaterina
   m_TagString: Untagged
@@ -857,6 +858,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &535812890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535812886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee8ecf86efd0464b84e663a71cc6613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: cat
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,6 +1947,7 @@ GameObject:
   - component: {fileID: 1400042847}
   - component: {fileID: 1400042846}
   - component: {fileID: 1400042848}
+  - component: {fileID: 1400042849}
   m_Layer: 0
   m_Name: Raterina
   m_TagString: Untagged
@@ -2004,7 +2019,7 @@ Transform:
   m_GameObject: {fileID: 1400042845}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.909, y: -0.689, z: 0}
+  m_LocalPosition: {x: -24.79, y: -5.62, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2032,6 +2047,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1400042849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400042845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee8ecf86efd0464b84e663a71cc6613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: rat
 --- !u!1 &1464207837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,6 +2155,7 @@ GameObject:
   - component: {fileID: 1491350789}
   - component: {fileID: 1491350788}
   - component: {fileID: 1491350790}
+  - component: {fileID: 1491350791}
   m_Layer: 0
   m_Name: Cowarine
   m_TagString: Untagged
@@ -2198,7 +2227,7 @@ Transform:
   m_GameObject: {fileID: 1491350787}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.27, y: 0.1, z: 0}
+  m_LocalPosition: {x: -25.36, y: -8.78, z: 0}
   m_LocalScale: {x: 0.36, y: 0.36, z: 0.36}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2226,6 +2255,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1491350791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491350787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee8ecf86efd0464b84e663a71cc6613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: cow
 --- !u!1 &1811173213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,17 +2755,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4986748535799655153, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
-      propertyPath: characterAnim
-      value: 
-      objectReference: {fileID: 535812889}
+    - target: {fileID: 7938872704536854438, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938872704536854438, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938872704536854438, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8192978757825460190, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
       propertyPath: characterAnim
       value: 
       objectReference: {fileID: 535812889}
     - target: {fileID: 8192978757825460190, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
-      propertyPath: isReturningCS
-      value: 0
+      propertyPath: moneyIncrease
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8192978757825460190, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
       propertyPath: characterAnim2
@@ -2734,13 +2784,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1491350790}
     - target: {fileID: 8192978757825460190, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
+      propertyPath: charactersScript
+      value: 
+      objectReference: {fileID: 535812890}
+    - target: {fileID: 8192978757825460190, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
       propertyPath: positioningScript
       value: 
       objectReference: {fileID: 649171543}
-    - target: {fileID: 8192978757825460190, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
-      propertyPath: timerDurationDrink
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8193997032118184036, guid: eec19f4e3bee62d4781fda85ddcb142c, type: 3}
       propertyPath: m_Name
       value: Extra

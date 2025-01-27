@@ -15,6 +15,7 @@ public class ClickScript : MonoBehaviour {
     public Animator characterAnim;
     public Animator characterAnim2;
     public Animator characterAnim3;
+    public Characters charactersScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,6 +31,12 @@ public class ClickScript : MonoBehaviour {
         if (timer >= timerDurationDrink) 
         {
             money = ManagerScript.Instance.money;
+            if (charactersScript.hasCow()) {
+                moneyIncrease = 20;
+            } else if (charactersScript.hasRat()) {
+                moneyIncrease = 10;
+            }
+
             money += moneyIncrease;
             isBeingMade = false;
             timer = 0;

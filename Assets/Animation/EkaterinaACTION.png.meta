@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EkaterinaACTION_0: 2990105536000764952
+      EkaterinaACTION_1: 696033186581623075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
